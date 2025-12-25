@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>臻美装饰 · 精品案例</title>
+  <title>臻美装饰 · 装修案例视频</title>
   <style>
-    /* 全局样式 */
     * {
       margin: 0;
       padding: 0;
@@ -13,166 +12,131 @@
     }
     body {
       font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
-      line-height: 1.6;
+      background-color: #f8f9fa;
       color: #333;
-      background-color: #f9f9f9;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
     header {
-      background: #2c3e50;
-      color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 30px 20px;
+      background: linear-gradient(135deg, #2c3e50, #1a1a2e);
+      color: white;
     }
     header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
     }
     header p {
-      font-size: 1.1rem;
       opacity: 0.9;
+      font-size: 1.05rem;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-
-    /* 案例展示 */
-    .cases {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .case-item {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .case-item:hover {
-      transform: translateY(-5px);
-    }
-    .case-img {
+    .video-wrapper {
+      position: relative;
       width: 100%;
-      height: 200px;
-      object-fit: cover;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 */
+      background: #000;
     }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
     .case-info {
-      padding: 1.2rem;
+      padding: 24px;
     }
-    .case-info h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
+    .case-info h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
       color: #2c3e50;
     }
     .case-info p {
-      color: #666;
-      font-size: 0.95rem;
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
-    /* 联系我们 */
     .contact {
-      background: #ecf0f1;
-      padding: 2.5rem 1.5rem;
       text-align: center;
-      margin-top: 3rem;
+      padding: 24px;
+      background: #edf7ff;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 20px;
     }
-    .contact h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #2c3e50;
-    }
-    .contact-info {
-      font-size: 1.2rem;
-      margin: 1rem 0;
-    }
-    .contact-info a {
+    .contact a {
       color: #e74c3c;
       text-decoration: none;
+      font-weight: bold;
     }
-    .contact-info a:hover {
+    .contact a:hover {
       text-decoration: underline;
     }
 
     footer {
       text-align: center;
-      padding: 1.5rem;
+      padding: 20px;
       color: #7f8c8d;
       font-size: 0.9rem;
     }
 
-    /* 响应式 */
     @media (max-width: 600px) {
       header h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
       }
-      .cases {
-        grid-template-columns: 1fr;
+      .case-info h2 {
+        font-size: 1.25rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>臻美装饰设计</h1>
-    <p>专注高端住宅与商业空间 · 10年匠心品质</p>
-  </header>
-
   <div class="container">
-    <div class="cases">
-      <!-- 案例 1 -->
-      <div class="case-item">
-        <img src="https://via.placeholder.com/600x400/e0e0e0/333333?text=现代简约客厅" alt="现代简约" class="case-img">
-        <div class="case-info">
-          <h3>现代简约 · 三居室</h3>
-          <p>面积：120㎡ | 风格：现代简约 | 城市：杭州</p>
-        </div>
-      </div>
+    <header>
+      <h1>现代轻奢 · 客厅实景案例</h1>
+      <p>杭州 · 98㎡ | 全程跟拍 · 所见即所得</p>
+    </header>
 
-      <!-- 案例 2 -->
-      <div class="case-item">
-        <img src="https://via.placeholder.com/600x400/e0e0e0/333333?text=新中式别墅" alt="新中式" class="case-img">
-        <div class="case-info">
-          <h3>新中式 · 别墅全案</h3>
-          <p>面积：320㎡ | 风格：新中式 | 城市：苏州</p>
-        </div>
-      </div>
-
-      <!-- 案例 3 -->
-      <div class="case-item">
-        <img src="https://via.placeholder.com/600x400/e0e0e0/333333?text=轻奢办公室" alt="轻奢办公" class="case-img">
-        <div class="case-info">
-          <h3>轻奢办公 · 创意园区</h3>
-          <p>面积：200㎡ | 风格：轻奢工业 | 城市：上海</p>
-        </div>
-      </div>
-
-      <!-- 案例 4（可继续添加） -->
-      <div class="case-item">
-        <img src="https://via.placeholder.com/600x400/e0e0e0/333333?text=北欧风卧室" alt="北欧风" class="case-img">
-        <div class="case-info">
-          <h3>北欧风 · 温馨两居</h3>
-          <p>面积：89㎡ | 风格：北欧 | 城市：成都</p>
-        </div>
-      </div>
+    <div class="video-wrapper">
+      <!-- 你提供的 Bilibili 视频 iframe -->
+      <iframe 
+        src="//player.bilibili.com/player.html?isOutside=true&aid=115738195138035&bvid=BV1tyqEBdELp&cid=34809643350&p=1" 
+        scrolling="no" 
+        frameborder="no" 
+        framespacing="0" 
+        allowfullscreen="true">
+      </iframe>
     </div>
-  </div>
 
-  <div class="contact">
-    <h2>📞 联系我们</h2>
-    <div class="contact-info">
-      <p>电话：<a href="tel:13800138000">138-0013-8000</a></p>
-      <p>微信：<strong>zhuangxiu_zhenmei</strong>（扫码添加）</p>
-      <p>地址：浙江省杭州市西湖区文三路123号</p>
+    <div class="case-info">
+      <h2>项目亮点</h2>
+      <p>
+        本案例采用现代轻奢风格，通过高级灰与金属线条的结合，打造兼具质感与实用性的居住空间。
+        视频包含：<strong>原始户型分析 → 设计方案讲解 → 施工过程实录 → 软装搭配建议</strong>。
+      </p>
     </div>
-    <!-- 可替换为真实微信二维码图片 -->
-    <img src="https://via.placeholder.com/150x150/ffffff/cccccc?text=微信二维码" alt="微信二维码" style="margin-top:1rem; border-radius:8px;">
+
+    <div class="contact">
+      <p>📞 想看更多案例？<a href="tel:13800138000">立即拨打 138-0013-8000</a> 预约免费设计！</p>
+      <p>💬 或添加微信：<strong>zhuangxiu_zhenmei</strong></p>
+    </div>
   </div>
 
   <footer>
-    <p>© 2025 臻美装饰设计有限公司 · 保留所有权利</p>
+    <p>© 2025 臻美装饰 · 视频由 Bilibili 提供支持</p>
   </footer>
 </body>
 </html>
